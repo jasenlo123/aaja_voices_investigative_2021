@@ -61,14 +61,20 @@ df_single_race = df_single_race.sort_values(by=['Race'],ascending=True)
 df_NCES_demo['Data'] = 'NCES'
 df_NCES_demo = df_NCES_demo.sort_values(by=['Race'],ascending=True)
 
+#replace hispanic with latinx
+df_single_race = df_single_race.append(df_NCES_demo).replace({'Hispanic': 'Latinx'}, regex=True)
+
 #export
-df_single_race.append(df_NCES_demo).to_csv('data/processed/single_race.csv',index=False)
+df_single_race.to_csv('data/processed/single_race.csv',index=False)
 
 #create dataframe for multiple racial identities (nerd box)
 ls_values_multi = list(df_spring_21['multi_race'].value_counts())
 ls_races_multi = df_spring_21['multi_race'].value_counts().index.tolist()
 df_multi_race = pd.DataFrame(list(zip(ls_races_multi, ls_values_multi)),
                columns =['Race', 'Count'])
+
+#replace hispanic with latinx
+df_multi_race = df_multi_race.replace({'Hispanic': 'Latinx'}, regex=True)
 
 #export
 df_multi_race.to_csv('data/processed/multi_race.csv',index=False)

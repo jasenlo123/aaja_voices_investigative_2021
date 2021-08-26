@@ -1,6 +1,6 @@
 # Asian American Journalism Association Voices Investigative Project 2021 - Student Newsroom Leadership Diversity
 
-Data publication and documentation for the 2021 AAJA investigative project: ***Few Black and Hispanic students are editors of top college newspapers, original survey finds.***
+Data publication and documentation for the 2021 AAJA investigative project: ***Few Black and Latinx students are editors of top college newspapers, original survey finds.***
 
 *By: Janice Kai Chen, Ilena Peng, Jasen Lo, Trisha Ahmed, Simon J. Levien and Devan Karp*
 
@@ -10,7 +10,7 @@ To understand the state of student newsroom leadership diversity and which racia
 compared demographic data we collected from student newsroom editors-in-chief against the demographic data of the colleges that the surveyed EICs attend. 
 
 
-**Of 73 editors-in-chief at award-winning college newsrooms in the Spring 2021 semester, less than 6 percent were Black, and approximately 10 percent were Hispanic — significantly less than their share of the college population.**
+**Of 73 editors-in-chief at award-winning college newsrooms in the Spring 2021 semester, less than 6 percent were Black, and approximately 10 percent were Latinx — significantly less than their share of the college population.**
 
 
 ## Project notes
@@ -32,3 +32,4 @@ ETL scripts help generate `csv` files in `data/processed` that are used to gener
 - Non-alien residents and students of unknown racial background were excluded from student demographic data aggregation. 
 - Although the editors-in-chief of the Calgary Journal are included in the survey data, Mount Royal University's demographic data are not accounted for in the student demographic data because it is based in Calgary, Canada. NCES only surveys colleges in the United States. 
 - Only the data for the schools of the 66 newsrooms editors-in-chief that responded to our survey were included in the aggregated data.
+- `data/source` uses the NCES racial category 'Hispanic', while `data/processed` and `data/public` uses 'Latinx'.
